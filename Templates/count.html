@@ -1,0 +1,15 @@
+<h1>there are {{count}} words in your text</h1>
+<a href="{% url 'home' %}">Back to Home Page</a>
+<a href="{% url 'about' %}">About</a>
+<h2>Your Text:</h2>
+
+{{ fulltext }}
+
+<h2>Statistics</h2>
+
+{% for word,ctr in wordDD %}
+
+{{word}} : {{ctr}}
+<br/ >
+
+{% endfor %}
